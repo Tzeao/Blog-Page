@@ -1,8 +1,14 @@
+body {
+    /*背景图片*/
+    background: url("../image/bg.jpg") no-repeat fixed!important;
+    background-size: 1600px !important;
+}
+
 .m-padded-tb-mini {
     /*1个em等于14个px*/
     padding-top: 0.2em !important;
     padding-bottom: 0.2em !important;
-    opacity: 80% !important;
+    opacity: 70% !important;
 }
 
 .m-padded-tb-massive {
