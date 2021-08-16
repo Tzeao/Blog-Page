@@ -77,7 +77,7 @@ body {
 }
 
 .m-container-small {
-    max-width: 60em !important;
+    max-width: 70em !important;
     margin: auto !important;
 }
 
@@ -119,4 +119,8 @@ body {
     }
 }
 
-
+/*----------阴影-------*/
+.m-shadow-small {
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
