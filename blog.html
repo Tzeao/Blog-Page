@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--    设置移动端浏览的效果-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客详情</title>
+    <!--    引入自定义的css-->
+    <link rel="stylesheet" href="./static/css/me.css">
+    <!--    引入semantic-ui css样式-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+</head>
+<body>
+
+<!--导航 semantic-ui 使用这个可以直接引用，类似bootstrap-->
+<!--ui 代表是一个ui组件-->
+<nav class="ui inverted attached segment m-padded-tb-mini">
+    <div class="ui container sticky">
+        <div class="ui inverted secondary stackable menu">
+            <!--logo-->
+            <h2 class="ui teal header item">Bold</h2>
+            <!--            编写小组件和图标-->
+            <a href="#" class="item_m item m-mobile-hide"><i class="home icon"></i>首页</a>
+            <a href="#" class="item_m item m-mobile-hide"><i class="idea icon"></i>分类</a>
+            <a href="#" class="item_m item m-mobile-hide"><i class="tags icon"></i>标签</a>
+            <a href="#" class="item_m item m-mobile-hide"><i class="clone icon"></i>归档</a>
+            <a href="#" class="item_m item m-mobile-hide"><i class="info icon"></i>关于我</a>
+            <!--            搜索栏-->
+            <div class="right item m-mobile-hide">
+                <div class="ui icon transparent input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link red icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui m-menu black icon button m-top-right m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+<!--中间内容-->
+<div class="m-container-small m-padded-tb-large">
+    <div class="ui container">
+        <!--      头部-->
+        <div class="ui segment top attached">
+            <div class="ui horizontal list link">
+                <div class="item">
+                    <img src="https://unsplash.it/100/100?image=1004" alt=""
+                         class="ui avatar image">
+                    <div class="content">
+                        <a href="#" class="header teal">Tzeao</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="calendar icon"></i> 2021-08-15
+                </div>
+                <div class="item">
+                    <i class="eye icon"></i> 1234
+                </div>
+            </div>
+        </div>
+        <!--        图片区域-->
+        <div class="ui attached segment">
+            <img src="https://unsplash.it/800/450?image=1000" alt="详情图片" class="ui fluid rounded image">
+        </div>
+        <!--        内容区域-->
+        <div class="ui attached padded segment">
+            <div class="ui right aligned basic segment">
+                <div class="ui orange basic label">原创</div>
+            </div>
+            <h2 class="ui center aligned header">
+                人生有限，接受事与愿违
+            </h2>
+            <br>
+            <div id="content" class="m-margin-tb-large">
+                最近空了B站刷刷罗翔老师的我的青铜时代和十三邀访谈当下饭剧，这是一个有趣的灵魂，是罗老师给我留下的第一印象。罗老师的魅力，在于他的风趣幽默和标新立异。但罗老师的终极魅力，却在于他敢于直视人性的弱点。并且忍着疼痛不断地自我校正。
+
+                罗翔用才华的内核和吊诡的外壳，让人走进他的律法世界。
+
+                而人们最终决定爱他，却是因为逐光的本能。
+
+                超乎常人的坦承，就是他的光源。
+
+                讲真，谁不曾逃避过弱者的凝视？
+            </div>
+            <!--            标签-->
+            <div style="margin-top: 2em !important;">
+                <div class="ui basic teal left pointing label">方法论</div>
+            </div>
+            <!--            打赏-->
+            <div class="ui center aligned basic segment">
+                <button id="payButton" class="ui orange circular basic button">赞赏</button>
+            </div>
+            <!--            支付二维码-->
+            <div class="ui payR flowing popup transition header">
+                <div class="ui orange basic label">
+                    <div class="ui images" style="font-size: inherit !important;">
+                        <div class="image">
+                            <img src="./static/image/wxshou.png" alt="微信支付" class="ui rounded bordered image"
+                                 style="width: 120px">
+                            <div>微信</div>
+                        </div>
+                        <div class="image">
+                            <img src="./static/image/zfbshou.png" alt="支付宝支付" class="ui rounded bordered image"
+                                 style="width: 120px">
+                            <div>支付宝</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--        博客信息-->
+        <div class="ui attached positive message">
+            <div class="ui middle aligned grid">
+                <div class="eleven wide column">
+                    <ui class="list">
+                        <li>作者：Tzeao(联系作者)</li>
+                        <li>发表时间：2021-08-16 18:45</li>
+                        <li>版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）</li>
+                        <li>公众号转载：请在文末添加作者公众号二维码</li>
+                    </ui>
+                </div>
+                <div class="five wide column">
+                    <img src="./static/image/wx.jpg" alt="联系微信" class="ui right floated rounded bordered image"
+                         style="width: 110px">
+                </div>
+            </div>
+        </div>
+        <!--        留言区域-->
+        <div class="ui bottom attached segment">
+            <div class="ui teal segment">
+                <div class="ui threaded comments">
+                    <h3 class="ui dividing header">Comments</h3>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="./static/image/req.png" alt="#">
+                        </a>
+                        <div class="content">
+                            <a class="author">Matt</a>
+                            <div class="metadata">
+                                <span class="date">今天下午 5:42</span>
+                            </div>
+                            <div class="text">太赞了！ </div>
+                            <div class="actions">
+                                <a class="reply">回复</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="./static/image/req.png" alt="#">
+                        </a>
+                        <div class="content">
+                            <a class="author">Elliot Fu</a>
+                            <div class="metadata">
+                                <span class="date">昨天上午12:30</span>
+                            </div>
+                            <div class="text">
+                                <p>這對我的研究是非常有用.謝謝!</p>
+                            </div>
+                            <div class="actions">
+                                <a class="reply">回复</a>
+                            </div>
+                        </div>
+                        <div class="comments">
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="./static/image/req.png" alt="#">
+                                </a>
+                                <div class="content">
+                                    <a class="author">Jenny Hess</a>
+                                    <div class="metadata">
+                                        <span class="date">刚刚</span>
+                                    </div>
+                                    <div class="text">艾略特你永远是多么正确 :) </div>
+                                    <div class="actions">
+                                        <a class="reply">回复</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="./static/image/req.png" alt="#">
+                        </a>
+                        <div class="content">
+                            <a class="author">Joe Henderson</a>
+                            <div class="metadata">
+                                <span class="date">5 天以前</span>
+                            </div>
+                            <div class="text">老兄，这太棒了。非常感谢。 </div>
+                            <div class="actions">
+                                <a class="reply">回复</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui form">
+                <div class="field">
+                    <textarea name="content" placeholder="请输入评论信息……">
+
+                    </textarea>
+                </div>
+                <div class="fields">
+                    <div class="field m-mobile-wide m-margin-bottom-mini">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="nickname" placeholder="姓名">
+                        </div>
+                    </div>
+                    <div class="field m-mobile-wide m-margin-bottom-mini">
+                        <div class="ui left icon input">
+                            <i class="mail icon"></i>
+                            <input type="email" name="email" placeholder="邮箱">
+                        </div>
+                    </div>
+                    <div class="field m-mobile-wide m-margin-bottom-mini">
+                        <button class="ui teal button m-mobile-wide"><i class="edit icon"></i>评论</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--底部-->
+<footer class="ui inverted vertical segment m-padded-tb-massive m-margin-tb-big">
+    <div class="ui center aligned container">
+        <!--    列布局 分成16份-->
+        <div class="ui divided inverted stackable grid">
+            <div class="three wide column">
+                <div class="ui link inverted list">
+                    <div class="item">
+                        <img src="./static/image/wx.jpg" class="ui rounded image" style="width: 110px" alt="网络不佳">
+                    </div>
+                </div>
+
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-opacity-mini">最新博客</h4>
+                <div class="ui link inverted list">
+                    <a href="#" class="item">用户故事</a>
+                    <a href="#" class="item">用户故事</a>
+                    <a href="#" class="item">用户故事</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-opacity-mini">联系我</h4>
+                <div class="ui link inverted list">
+                    <a href="#" class="item">Email: 773238750@qq.com</a>
+                    <a href="#" class="item">QQ: 773238750</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header m-opacity-mini">Mind</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-mini">
+                    你在一个清朗夏夜，望着繁密群星，有一种可望不可及的失望。我们如此可怜吗？不，决不！我们要征服宇宙。</p>
+            </div>
+
+        </div>
+        <!--    画一条线 写备案号-->
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-mini">Copyright&nbsp;&copy;&nbsp;2005&nbsp;-&nbsp;2021 Tzeao</p>
+    </div>
+</footer>
+
+<!--引入jquery-->
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!--引入semantic-ui js代码-->
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<!--自己写的-->
+<script>
+    <!--    菜单-->
+    $('.m-menu').click(function () {
+        $('.item_m').toggleClass('m-mobile-hide');
+    });
+    //弹出二维码
+    $('#payButton').popup({
+        //定位
+        popup: $('.payR.popup'),
+        //触发方法
+        on: 'click',
+        //位置
+        position: 'bottom center'
+    })
+</script>
+</body>
+</html>
