@@ -124,3 +124,17 @@ body {
     -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
 }
+
+.a{
+    display: block !important;
+    position: relative !important;
+    top: -90px !important;
+    z-index: 100;
+    font-weight: bold;
+}
+.m-type{
+    opacity: 0.9!important;
+}
+.m-bg{
+    filter: brightness(60%) !important;
+}
