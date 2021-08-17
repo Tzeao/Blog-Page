@@ -47,8 +47,8 @@
     <div class="ui container">
         <div class="right menu">
             <a href="#" class="ui m-item m-mobile-hide teal button">新增</a>
-            <a href="#" class="ui m-item m-mobile-hide item active">列表</a>
-            <a href="#" class="item m-item m-mobile-hide">发布</a>
+            <a href="#" class="ui m-item orange m-mobile-hide item active">列表</a>
+            <a href="#" class="item m-item green m-mobile-hide">发布</a>
             <a href="#" class="ui m-two-menu black icon button m-mobile-show">
                 <i class="sidebar icon"></i>
             </a>
@@ -181,12 +181,11 @@
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 <!--自己写的-->
 <script>
-    <!--
-    菜单-->
+
     $('.m-menu').click(function () {
         $('.item_m').toggleClass('m-mobile-hide');
     });
-    <!--    二菜单-->
+    // <!--    二菜单-->
     $('.m-two-menu').click(function () {
         $('.m-item').toggleClass('m-mobile-hide');
     });
