@@ -668,7 +668,7 @@ h5,h6{font-size:1em;}
         <button type="button" class="ui toc green button">目录</button>
         <a href="#comment-container" class="ui pink button">评论</a>
         <button class="ui icon wechat purple button"><i class="qrcode icon"></i></button>
-        <a href="#" class="ui icon violet  button"><i class="rocket icon"></i></a>
+        <div id="toTop-button" class="ui icon violet  button"><i class="rocket icon"></i></div>
     </div>
 </div>
 <!--目录-->
@@ -678,7 +678,7 @@ h5,h6{font-size:1em;}
 </div>
 <!--生成文章二维码-->
 <div id="qrcode" class="ui wechat-qr flowing popup transition hidden" style="width: 130px !important;">
-<!--    <img src="./static/image/me.jpg" alt="#" class="ui rounded image" style="width: 120px !important;">-->
+    <!--    <img src="./static/image/me.jpg" alt="#" class="ui rounded image" style="width: 120px !important;">-->
 </div>
 <!--底部-->
 <footer class="ui inverted vertical segment m-padded-tb-massive m-margin-tb-big">
@@ -731,7 +731,8 @@ h5,h6{font-size:1em;}
 <script src="./static/lib/tocpot/tocbot.min.js"></script>
 <!--二维码生成-->
 <script src="./static/lib/qrcode/qrcode.min.js"></script>
-
+<!--平滑滚动-->
+<script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.3/jquery.scrollTo.min.js"></script>
 <!--自己写的-->
 <script>
     <!--    菜单-->
@@ -781,9 +782,14 @@ h5,h6{font-size:1em;}
         text: "http://jindo.dev.naver.com/collie",
         width: 110,
         height: 110,
-        colorDark : "#000000",
-        colorLight : "#ffffff",
-        correctLevel : QRCode.CorrectLevel.H
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+    });
+
+//    平滑滚动
+    $('#toTop-button').click(function (){
+        $(window).scrollTo(0,1500)
     });
 </script>
 </body>

@@ -15,5 +15,6 @@
     <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" name="mustache" level="application" />
     <orderEntry type="library" name="normalize" level="application" />
+    <orderEntry type="library" name="jquery.scrollto" level="application" />
   </component>
 </module>
