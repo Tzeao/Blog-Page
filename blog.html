@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./static/css/animate.css">
     <!--    引入语法高亮-->
     <link rel="stylesheet" href="./static/lib/prism/prism.css">
+    <!--    引入目录生成-->
+    <link rel="stylesheet" href="./static/lib/tocpot/tocbot.css">
     <!--    引入自定义的css-->
     <link rel="stylesheet" href="./static/css/me.css">
 </head>
@@ -79,7 +81,7 @@
             </h2>
             <br>
             <!--            文章内容-->
-            <div id="content" class="typo typo-selection m-margin-tb-large">
+            <div id="content" class="typo typo-selection js-toc-content m-margin-tb-large">
                 <h1>中文网页重设与排版：<i class="serif">Typo.css</i></h1><br/>
 
                 <h2 id="tagline" class="serif">一致化浏览器排版效果，构建最适合中文阅读的网页排版</h2>
@@ -519,12 +521,7 @@ h5,h6{font-size:1em;}
                     即可。
                 </p>
             </div>
-            <!-- #wrapper -->
-            <a href="https://github.com/sofish/Typo.css" id="fork">
-                <img alt="Fork me on GitHub" src="//s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
-            </a>
 
-            <div class="ui horizontal divider">end</div>
             <!--            标签-->
             <div style="margin-top: 2em !important;">
                 <div class="ui basic teal left pointing label">方法论</div>
@@ -569,7 +566,7 @@ h5,h6{font-size:1em;}
             </div>
         </div>
         <!--        留言区域-->
-        <div class="ui bottom attached segment">
+        <div id="comment-container" class="ui bottom attached segment">
             <div class="ui teal segment">
                 <div class="ui threaded comments">
                     <h3 class="ui dividing header">Comments</h3>
@@ -665,6 +662,22 @@ h5,h6{font-size:1em;}
     </div>
 </div>
 
+<!--侧边导航栏-->
+<div class="m-padded m-fixed m-right-bottom">
+    <div class="ui vertical icon buttons">
+        <button type="button" class="ui toc green button">目录</button>
+        <a href="#comment-container" class="ui pink button">评论</a>
+        <button class="ui icon purple button"><i class="wechat icon"></i></button>
+        <a href="#" class="ui icon violet  button"><i class="rocket icon"></i></a>
+    </div>
+</div>
+<!--目录-->
+<div class="ui toc-container stackable flowing popup transition hidden" style="width: 250px !important;">
+    <ol class="js-toc">
+
+    </ol>
+</div>
+
 <!--底部-->
 <footer class="ui inverted vertical segment m-padded-tb-massive m-margin-tb-big">
     <div class="ui center aligned container">
@@ -712,6 +725,9 @@ h5,h6{font-size:1em;}
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 <!--语法高亮-->
 <script src="./static/lib/prism/prism.js"></script>
+<!--目录生成-->
+<script src="./static/lib/tocpot/tocbot.min.js"></script>
+
 <!--自己写的-->
 <script>
     <!--    菜单-->
@@ -726,6 +742,28 @@ h5,h6{font-size:1em;}
         on: 'click',
         //位置
         position: 'bottom center'
+    })
+
+    //初始化目录生成
+    tocbot.init({
+        // Where to render the table of contents.//目录生产在哪一个区域
+        tocSelector: '.js-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.js-toc-content',// 从那些内容来生成
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+    });
+
+    //弹出目录
+    $('.toc').popup({
+        //定位
+        popup: $('.toc-container.popup'),
+        //触发方法
+        on: 'click',
+        //位置
+        position: 'left center'
     })
 </script>
 </body>

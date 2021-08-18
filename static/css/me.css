@@ -24,6 +24,9 @@ body {
 .m-padded-mini {
     padding: 0.3em !important;
 }
+.m-padded{
+    padding: 1em !important;
+}
 
 .m-margin-tb-large {
     margin-top: 0.3em !important;
@@ -97,6 +100,15 @@ body {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+.m-fixed{
+    position: fixed !important;
+    z-index: 1 !important;
+}
+.m-right-bottom{
+    bottom: 0!important;
+    right: 0 !important;
 }
 
 /*---平时隐藏菜单按钮---*/
