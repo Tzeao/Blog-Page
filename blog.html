@@ -667,17 +667,19 @@ h5,h6{font-size:1em;}
     <div class="ui vertical icon buttons">
         <button type="button" class="ui toc green button">目录</button>
         <a href="#comment-container" class="ui pink button">评论</a>
-        <button class="ui icon purple button"><i class="wechat icon"></i></button>
+        <button class="ui icon wechat purple button"><i class="qrcode icon"></i></button>
         <a href="#" class="ui icon violet  button"><i class="rocket icon"></i></a>
     </div>
 </div>
 <!--目录-->
-<div class="ui toc-container stackable flowing popup transition hidden" style="width: 250px !important;">
+<div class="ui toc-container stackable flowing popup transition hidden" style="width: 300px !important;">
     <ol class="js-toc">
-
     </ol>
 </div>
-
+<!--生成文章二维码-->
+<div id="qrcode" class="ui wechat-qr flowing popup transition hidden" style="width: 130px !important;">
+<!--    <img src="./static/image/me.jpg" alt="#" class="ui rounded image" style="width: 120px !important;">-->
+</div>
 <!--底部-->
 <footer class="ui inverted vertical segment m-padded-tb-massive m-margin-tb-big">
     <div class="ui center aligned container">
@@ -727,6 +729,8 @@ h5,h6{font-size:1em;}
 <script src="./static/lib/prism/prism.js"></script>
 <!--目录生成-->
 <script src="./static/lib/tocpot/tocbot.min.js"></script>
+<!--二维码生成-->
+<script src="./static/lib/qrcode/qrcode.min.js"></script>
 
 <!--自己写的-->
 <script>
@@ -765,6 +769,22 @@ h5,h6{font-size:1em;}
         //位置
         position: 'left center'
     })
+
+    //    弹出文章二维码
+    $('.wechat').popup({
+        popup: $('.wechat-qr'),
+        position: 'left center'
+    })
+
+    //    生成二维码
+    var qrcode = new QRCode("qrcode", { //这个是二维码生成的位置qrcode
+        text: "http://jindo.dev.naver.com/collie",
+        width: 110,
+        height: 110,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
 </script>
 </body>
 </html>
